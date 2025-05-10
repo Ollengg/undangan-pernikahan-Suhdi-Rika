@@ -1,0 +1,1309 @@
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden; /* Hindari scroll horizontal */
+  height: 100%; /* Pastikan elemen memenuhi tinggi layar */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #000; /* Warna background area samping */
+}
+
+#couple {
+  margin: 0; /* Hilangkan margin */
+  padding: 0; /* Sesuaikan padding jika diperlukan */
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 800px; /* Lebar maksimal konten */
+  position: relative;
+}
+
+/* Modifikasi section */
+section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Penyesuaian container */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Undangan Section */
+.undangan-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("Image/bg_1.jpg") center/cover no-repeat fixed;
+  position: relative;
+  height: 100vh; /* Pastikan tinggi section memenuhi layar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  z-index: 1; /* Pastikan berada di bawah elemen divider */
+}
+
+.undangan-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Tinggi area shading atas */
+  background: linear-gradient(
+    to bottom,
+    rgba(240, 238, 238, 0.5),
+    rgba(214, 212, 212, 0)
+  ); /* Gradasi menghadap ke bawah */
+  background: linear-gradient(to top, transparent, #ffff);
+  z-index: 2; /* Pastikan shading berada di atas background */
+}
+
+.undangan-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Tinggi area blur */
+  background: linear-gradient(
+    to bottom,
+    rgba(240, 238, 238, 0.5),
+    rgba(214, 212, 212, 0)
+  );
+  background: linear-gradient(to bottom, transparent, #ffff);
+  z-index: 2;
+}
+.hero {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Pastikan tepat 100vh */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("Image/bg_2.jpg") center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll; /* Ini yang perlu diubah */
+  position: relative;
+  height: 100vh;
+  color: white;
+  overflow: hidden; /* Pastikan tidak ada overflow */
+  margin-bottom: -1;
+  padding-bottom: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Tinggi area shading atas */
+  background: linear-gradient(
+    to bottom,
+    rgba(19, 18, 18, 0.5),
+    rgba(214, 212, 212, 0)
+  ); /* Gradasi menghadap ke bawah */
+  background: linear-gradient(to top, transparent, #000000);
+  z-index: 2; /* Pastikan shading berada di atas background */
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Tinggi area shading bawah */
+  background: linear-gradient(
+    to top,
+    rgba(15, 15, 15, 0.5),
+    rgba(214, 212, 212, 0)
+  ); /* Gradasi menghadap ke atas */
+  background: linear-gradient(to bottom, transparent, #000000);
+  z-index: 2; /* Pastikan shading berada di atas background */
+}
+.hero h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 4em;
+  margin: 10px 0;
+}
+
+.hero p {
+  font-family: "Sacramento", cursive; /* Font elegan */
+  font-size: 1.5em;
+  margin: 10px 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#countdown {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+/* GANTI DENGAN INI */
+.circle-countdown {
+  display: flex;
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
+  gap: 15px; /* Jarak antar item */
+  flex-wrap: wrap; /* Bungkus item jika ruang tidak cukup */
+  margin: 30px 0;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(245, 240, 240, 0.2);
+}
+
+.countdown-circle:hover {
+  box-shadow: 0 8px 25px rgba(248, 246, 247, 0.6);
+  transform: translateY(-3px);
+}
+
+.pink-bg {
+  background-color: #ff90bb;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+  color: white;
+}
+
+.countdown-item p {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  font-size: 1rem;
+  color: white;
+}
+/* Button Styles */
+.btn {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: pink;
+  color: white;
+}
+
+/* Ganti font dan posisi judul */
+.undangan-section h2 {
+  font-family: "Playfair Display", serif; /* Font elegan */
+  font-weight: 600;
+  font-size: 2.8rem;
+  margin-top: -20px; /* Naikkan 20px */
+  margin-bottom: 20px; /* Kurangi margin bawah judul */
+  letter-spacing: 1px;
+  color: #ffb6c1; /* Warna pink soft */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.event-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  /* backdrop-filter: blur(8px); */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
+}
+
+.event-card h3 {
+  color: #ffb6c1; /* Warna pink lembut */
+  font-family: "Sacramento", cursive;
+  font-size: 2.5rem;
+}
+.event-card p {
+  margin: 8px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Tengah horizontal */
+  justify-content: center; /* Tengah vertikal */
+  padding: 20px;
+  box-sizing: border-box; /* Agar padding tidak mempengaruhi width */
+  z-index: 2; /* Pastikan di atas background */
+  position: relative; /* Agar z-index berfungsi */
+  margin-bottom: 0; /* Hilangkan margin bawah container jika ada */
+  height: auto;
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Lebar maksimum */
+}
+
+.event-container {
+  width: 100%;
+  max-width: 600px; /* Lebar maksimum */
+  display: flex;
+  flex-direction: column; /* Susun vertikal */
+  align-items: center; /* Tengah horizontal */
+  gap: 30px; /* Jarak antar card */
+  width: 100%;
+  max-width: 600px; /* Lebar maksimum */
+  margin: 0 auto; /* Pusatkan container */
+}
+
+/* Pembatas minimalis */
+
+.map-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("Image/bg_1.jpg") center/cover no-repeat fixed;
+  color: white;
+  padding: 20px 20px; /* Kurangi padding atas dan bawah */
+  position: relative;
+  overflow: hidden;
+}
+
+.map-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Tinggi area shading atas */
+  background: linear-gradient(
+    to bottom,
+    rgba(240, 238, 238, 0.5),
+    rgba(214, 212, 212, 0)
+  ); /* Gradasi menghadap ke bawah */
+  background: linear-gradient(to top, transparent, #ffff);
+  z-index: 2; /* Pastikan shading berada di atas background */
+}
+
+.map-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Tinggi area shading bawah */
+  background: linear-gradient(
+    to top,
+    rgba(240, 238, 238, 0.5),
+    rgba(214, 212, 212, 0)
+  ); /* Gradasi menghadap ke atas */
+  background: linear-gradient(to bottom, transparent, #ffff);
+  z-index: 2; /* Pastikan shading berada di atas background */
+}
+
+.map-section h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 2.8rem;
+  margin-bottom: 20px; /* Kurangi margin bawah judul */
+  text-align: center;
+  color: #ffb6c1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.map-description {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #f8f8f8;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 800px;
+  margin-top: 20px; /* Jarak atas */
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px; /* Sesuaikan tinggi iframe */
+  border: none;
+}
+
+.rsvp-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("Image/bg_1.jpg") center/cover no-repeat fixed;
+  padding: 40px 20px; /* Kurangi padding atas dan bawah */
+  position: relative;
+  overflow: hidden;
+}
+
+.rsvp-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Tinggi area shading atas */
+  background: linear-gradient(
+    to bottom,
+    rgba(240, 238, 238, 0.5),
+    rgba(214, 212, 212, 0)
+  ); /* Gradasi menghadap ke bawah */
+  background: linear-gradient(to top, transparent, #ffff);
+  z-index: 2; /* Pastikan shading berada di atas background */
+}
+
+.rsvp-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Tinggi area shading bawah */
+  background: linear-gradient(
+    to top,
+    rgba(29, 28, 28, 0.5),
+    rgba(214, 212, 212, 0)
+  ); /* Gradasi menghadap ke atas */
+  background: linear-gradient(to bottom, transparent, #000);
+  z-index: 2; /* Pastikan shading berada di atas background */
+}
+
+.rsvp-section h2 {
+  font-family: "Playfair Display", serif; /* Font elegan */
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-top: -20px; /* Naikkan 20px */
+  margin-bottom: 20px; /* Kurangi margin bawah judul */
+  letter-spacing: 1px;
+  color: #ffb6c1; /* Warna pink soft */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Pusatkan teks */
+  display: flex;
+  justify-content: center; /* Pastikan teks tetap di tengah */
+  align-items: center; /* Pastikan teks tetap sejajar secara vertikal */
+}
+
+/* rsv */
+.rsvp-form {
+  width: 100%;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7); /* Hitam transparan */
+  border-radius: 10px;
+  color: white; /* Pastikan teks tetap terlihat di atas background hitam */
+}
+
+.rsvp-form input,
+.rsvp-form select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Animasi transisi */
+}
+
+.rsvp-form button {
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white; /* Warna pink lembut default */
+  color: black; /* Warna teks putih */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Animasi transisi */
+}
+
+.rsvp-form input:hover,
+.rsvp-form select:hover,
+.rsvp-form button:hover {
+  background-color: #ffb6c1; /* Warna pink lembut */
+  border-color: #ffb6c1; /* Border pink lembut */
+  color: white; /* Warna teks putih */
+  transition: all 0.3s ease; /* Animasi transisi */
+}
+
+/* Ucapan terimah Kasih */
+.thankyou-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px; /* Kurangi padding */
+  background: #000;
+  color: white;
+  min-height: auto; /* Sesuaikan tinggi dengan konten */
+}
+.thankyou-section h2 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffb6c1; /* Warna pink lembut */
+}
+
+.couple-name {
+  font-family: "Sacramento", cursive;
+  font-size: 3.5rem;
+  color: #ff90bb;
+  margin: 20px 0;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 15px;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  color: #ff90bb;
+}
+
+.undangan-section,
+.map-section,
+.rsvp-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("Image/bg_1.jpg") center/cover no-repeat fixed;
+  color: white;
+  height: auto; /* Tinggi menyesuaikan konten */
+  padding: 60px 0;
+  position: relative;
+}
+
+.couple-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("Image/bg_1.jpg") center/cover no-repeat fixed;
+  padding: 60px 20px;
+  position: relative;
+  color: white;
+}
+
+.couple-section h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ffb6c1;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  white-space: nowrap; /* Mencegah text wrapping */
+  overflow: hidden; /* Menyembunyikan teks yang melebihi container */
+  text-overflow: ellipsis; /* Menambahkan ... jika teks terpotong */
+  width: 100%; /* Menggunakan lebar penuh container */
+  text-align: center; /* Memastikan teks tetap di tengah */
+  padding: 0 20px; /* Memberikan sedikit padding */
+  box-sizing: border-box; /* Memastikan padding termasuk dalam width */
+}
+
+.couple-container {
+  width: 100%;
+  max-width: 600px; /* Lebar maksimum */
+  display: flex;
+  flex-direction: column; /* Susun secara vertikal untuk perangkat kecil */
+  align-items: center;
+  justify-content: center; /* Pusatkan secara vertikal */
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.couple-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Pastikan konten tersebar merata */
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  min-height: 300px; /* Pastikan semua box memiliki tinggi minimum yang sama */
+  height: 100%; /* Pastikan semua box memiliki tinggi yang sama */
+}
+
+.couple-info {
+  flex-grow: 1; /* Pastikan bagian ini mengisi ruang yang tersedia */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Sebar konten secara merata */
+}
+
+.couple-info h3 {
+  font-family: "Sacramento", cursive;
+  font-size: 2.5rem;
+  color: #ffb6c1;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+}
+
+.couple-info .title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f8f8f8;
+}
+
+.couple-info .parents {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Pastikan bagian ini mengisi ruang yang tersedia */
+}
+
+.heart-divider {
+  font-size: 3rem;
+  color: #ff90bb;
+  margin: 20px 0;
+  animation: pulse 2s infinite;
+}
+
+.couple-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Tinggi area shading atas */
+  background: linear-gradient(
+    to bottom,
+    rgba(24, 23, 23, 0.5),
+    rgba(214, 212, 212, 0)
+  ); /* Gradasi menghadap ke bawah */
+  background: linear-gradient(to top, transparent, #000);
+  z-index: 2; /* Pastikan shading berada di atas background */
+}
+
+.couple-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Tinggi area shading bawah */
+  background: linear-gradient(
+    to top,
+    rgba(240, 238, 238, 0.5),
+    rgba(214, 212, 212, 0)
+  ); /* Gradasi menghadap ke atas */
+  background: linear-gradient(to bottom, transparent, #ffff);
+  z-index: 2; /* Pastikan shading berada di atas background */
+}
+
+/* Wedding Gift Section */
+.gift-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("Image/bg_1.jpg") center/cover no-repeat fixed;
+  padding: 60px 20px;
+  position: relative;
+  color: white;
+}
+
+.gift-section h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 2.8rem;
+  text-align: center;
+  color: #ffb6c1;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.gift-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gift-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.gift-card i.bi-gift-fill {
+  font-size: 3rem;
+  color: #ff90bb;
+  margin-bottom: 20px;
+}
+
+.gift-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #ffb6c1;
+  margin-bottom: 20px;
+}
+
+.gift-card p {
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.gift-option {
+  margin-bottom: 30px;
+  text-align: left;
+  padding: 20px;
+  background: rgba(255, 144, 187, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #ff90bb;
+}
+
+.gift-option h4 {
+  font-family: "Playfair Display", serif;
+  color: #ffb6c1;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gift-option h4 i {
+  font-size: 1.5rem;
+}
+
+/* ==================== */
+/* WEDDING GIFT SECTION */
+/* ==================== */
+.gift-card .bank-account {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+  border-radius: 10px;
+  padding: 18px;
+  margin: 20px auto;
+  max-width: 320px;
+  backdrop-filter: blur(5px);
+}
+
+.gift-card .account-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 12px 0;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.gift-card #bri-account {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Courier New", monospace;
+  color: white;
+  word-break: break-all;
+}
+
+.gift-card .btn-copy {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #ffb6c1;
+  font-size: 18px;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.gift-card .btn-copy:hover {
+  color: #ff90bb;
+  transform: scale(1.1);
+}
+
+.gift-card .bank-account > p:first-child {
+  font-weight: 600;
+  color: #ffb6c1;
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.gift-card .bank-account > p:last-child {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.gift-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Tinggi area shading atas */
+  background: linear-gradient(
+    to bottom,
+    rgba(240, 238, 238, 0.5),
+    rgba(214, 212, 212, 0)
+  ); /* Gradasi menghadap ke bawah */
+  background: linear-gradient(to top, transparent, #ffff);
+  z-index: 2; /* Pastikan shading berada di atas background */
+}
+
+.gift-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Tinggi area shading bawah */
+  background: linear-gradient(
+    to top,
+    rgba(240, 238, 238, 0.5),
+    rgba(214, 212, 212, 0)
+  ); /* Gradasi menghadap ke atas */
+  background: linear-gradient(to bottom, transparent, #ffff);
+  z-index: 2; /* Pastikan shading berada di atas background */
+}
+.side-menu {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5px 10px; /* Kurangi padding agar lebih ramping */
+  border-radius: 10px 0 0 10px;
+  z-index: 1000;
+}
+
+.side-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu ul li {
+  margin: 5px 0; /* Kurangi jarak antar tombol */
+}
+
+.side-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem; /* Ukuran ikon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Lebar tombol */
+  height: 40px; /* Tinggi tombol */
+  background: #ff90bb;
+  border-radius: 50%; /* Bentuk lingkaran */
+  transition: all 0.3s ease;
+}
+
+.side-menu ul li a:hover {
+  background: #ffb6c1;
+  color: #000;
+}
+
+.side-menu ul li a i {
+  display: block;
+  line-height: 1;
+}
+
+/* Tombol Toggle */
+
+/* Footer */
+.footer {
+  background-color: #f8f9fa; /* Warna latar belakang putih */
+  color: #333; /* Warna teks */
+  text-align: center;
+  padding: 10px 20px; /* Kurangi padding agar lebih pendek */
+  border-top: 1px solid #ddd; /* Garis pemisah di atas footer */
+  display: flex; /* Gunakan Flexbox untuk tata letak horizontal */
+  justify-content: center; /* Pusatkan konten secara horizontal */
+  align-items: center; /* Pusatkan konten secara vertikal */
+  gap: 10px; /* Jarak antara elemen */
+}
+
+.footer span {
+  font-size: 1rem; /* Ukuran teks "Hubungi Kami" */
+  font-weight: bold;
+  color: #333; /* Warna teks */
+}
+
+.footer a {
+  text-decoration: none;
+  color: #25d366; /* Warna hijau khas WhatsApp */
+  font-size: 1rem; /* Ukuran teks nomor WhatsApp */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Jarak antara ikon dan teks */
+}
+
+.footer a:hover {
+  color: #128c7e; /* Warna hijau lebih gelap saat hover */
+}
+
+.footer i {
+  font-size: 1.2rem; /* Ukuran ikon WhatsApp */
+  color: #25d366; /* Warna hijau khas WhatsApp */
+  transition: color 0.3s ease; /* Tambahkan transisi untuk efek hover */
+}
+
+.footer i:hover {
+  color: #128c7e; /* Warna hijau lebih gelap saat hover */
+}
+
+.no-scroll {
+  overflow: hidden; /* Mencegah scroll */
+}
+
+#hero {
+  height: 100vh; /* Pastikan elemen memenuhi tinggi layar */
+  width: 100%; /* Pastikan elemen memenuhi lebar layar */
+  overflow: hidden; /* Pastikan tidak ada konten yang meluap */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("Image/bg_2.jpg") center/cover no-repeat; /* Sesuaikan dengan gambar Anda */
+  color: white;
+  margin: 0; /* Hilangkan margin */
+  padding: 0; /* Hilangkan padding */
+  position: relative;
+  z-index: 10; /* Pastikan elemen berada di atas */
+}
+
+.main-content {
+  display: none; /* Sembunyikan dulu halaman 2 */
+}
+#couple {
+  margin: 0; /* Hilangkan margin */
+  padding: 0; /* Sesuaikan padding jika diperlukan */
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out; /* Animasi fade-in selama 1 detik */
+}
+
+.slide-in {
+  animation: slideIn 1s ease-in-out; /* Animasi slide-in selama 1 detik */
+}
+/* Styling untuk <section> sebagai konten terpusat */
+
+/* Pembatas minimalis */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3em; /* Ukuran font lebih kecil untuk perangkat kecil */
+  }
+
+  #countdown span {
+    min-width: 50px;
+    font-size: 0.9em; /* Sesuaikan ukuran teks countdown */
+  }
+
+  .undangan-section h2 {
+    font-size: 2.2rem;
+    margin-top: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container iframe {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .event-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    /* TAMBAHKAN: */
+    padding-bottom: 0px; /* Jarak dari footer */
+  }
+
+  .event-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .undangan-section h2 {
+    font-size: 2.2rem;
+    margin-top: -10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .undangan-section,
+  .map-section,
+  .rsvp-section {
+    padding: 30px 20px; /* Kurangi padding lebih lanjut untuk laptop */
+  }
+
+  .undangan-section h2,
+  .map-section h2,
+  .rsvp-section h2 {
+    margin-bottom: 15px; /* Kurangi margin bawah judul lebih lanjut */
+  }
+}
+
+@media (max-width: 768px) {
+  .rsvp-section h2 {
+    font-size: 2.2rem; /* Ukuran font lebih kecil untuk perangkat kecil */
+    margin-top: -10px; /* Kurangi margin atas */
+    margin-bottom: 15px; /* Kurangi margin bawah */
+  }
+}
+
+@media (max-width: 768px) {
+  .undangan-section h2 {
+    font-size: 2.2rem; /* Ukuran font lebih kecil untuk perangkat kecil */
+  }
+
+  .event-container {
+    padding: 10px; /* Kurangi padding untuk perangkat kecil */
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .countdown-circle {
+    width: 60px; /* Ukuran lebih kecil untuk perangkat kecil */
+    height: 60px;
+    font-size: 1.2rem; /* Sesuaikan ukuran teks */
+  }
+
+  .countdown-item p {
+    font-size: 0.8rem; /* Ukuran teks label lebih kecil */
+  }
+}
+.music-toggle {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #ff90bb;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.music-toggle:hover {
+  background: #ff90bb;
+  color: black;
+}
+/* Tombol copy yang minimalis */
+
+section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("Image/bg_1.jpg") center/cover no-repeat fixed;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    max-width: 100%;
+  }
+
+  section {
+    padding: 60px 15px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .couple-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .heart-divider {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .couple-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .couple-info h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .couple-section h2 {
+    font-size: 2rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+}
+
+@media (max-width: 320px) {
+  .couple-section h2 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .container {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+}
+
+@media (max-width: 320px) {
+  .couple-section .container h2 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .couple-info h3 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+
+  .couple-info .title {
+    font-size: 1.2rem; /* Ukuran font lebih kecil di HP */
+    padding: 10 5px; /* Padding lebih kecil */
+  }
+
+  .couple-info .parents {
+    font-size: 1rem; /* Ukuran font lebih kecil di HP */
+    padding: 10 5px; /* Padding lebih kecil */
+  }
+}
+@media (max-width: 360px) {
+  .couple-section h2 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .container {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .couple-info h3 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .couple-info .title {
+    font-size: 1.2rem; /* Ukuran font lebih kecil di HP */
+    padding: 10 5px; /* Padding lebih kecil */
+  }
+  .couple-info .parents {
+    font-size: 1rem; /* Ukuran font lebih kecil di HP */
+    padding: 10 5px; /* Padding lebih kecil */
+  }
+}
+
+@media (max-width: 375px) {
+  .couple-section h2 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .container {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .couple-info h3 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .couple-info .title {
+    font-size: 1.2rem; /* Ukuran font lebih kecil di HP */
+    padding: 10 5px; /* Padding lebih kecil */
+  }
+  .couple-info .parents {
+    font-size: 1rem; /* Ukuran font lebih kecil di HP */
+    padding: 10 5px; /* Padding lebih kecil */
+  }
+}
+
+/* Responsive untuk perangkat besar (Laptop) */
+@media (min-width: 769px) {
+  .couple-container {
+    gap: 20px; /* Kurangi jarak antar kolom untuk laptop */
+  }
+
+  .couple-card {
+    max-width: 350px; /* Sesuaikan lebar kartu */
+  }
+
+  .couple-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .couple-info h3 {
+    font-size: 2.2rem;
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .gift-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .gift-card {
+    padding: 20px;
+  }
+
+  .gift-option {
+    padding: 15px;
+  }
+}
+
+/* Side Menu */
+
+@media (max-width: 375px) {
+  .container h2 {
+    font-size: 3rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+
+  .event-card h3 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .event-card p {
+    font-size: 1.2rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .event-card .event-time {
+    font-size: 1.2rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+}
+@media (max-width: 414px) {
+  .couple-info h3 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .couple-section h2 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .rsvp-section h2 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .undangan-section h2 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .map-section h2 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+  .gift-section h2 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di HP */
+    padding: 0 10px; /* Padding lebih kecil */
+  }
+}
+
+@media (max-width: 768px) {
+  .couple-section {
+    padding: 20px 10px; /* Kurangi padding untuk perangkat kecil */
+  }
+
+  .couple-container {
+    flex-direction: column; /* Susun elemen secara vertikal */
+    gap: 20px; /* Tambahkan jarak antar elemen */
+  }
+
+  .couple-card {
+    margin-bottom: 20px; /* Tambahkan margin bawah untuk elemen */
+  }
+
+  .heart-divider {
+    margin: 20px 0; /* Tambahkan margin atas dan bawah untuk divider */
+  }
+
+  .couple-info h3 {
+    font-size: 1.5rem; /* Sesuaikan ukuran font */
+  }
+
+  .couple-info p {
+    font-size: 1rem; /* Sesuaikan ukuran font */
+  }
+}

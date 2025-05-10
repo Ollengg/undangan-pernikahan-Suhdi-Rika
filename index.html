@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Digital</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Alex+Brush&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+ 
+  <body>
+        <div class="side-menu">
+          <ul>
+            <li>
+              <a href="#hero" title="Home"><i class="bi bi-house"></i></a>
+            </li>
+            <li>
+              <a href="#couple" title="Pasangan"><i class="bi bi-people"></i></a>
+            </li>
+            <li>
+              <a href="#undangan" title="Detail Acara"><i class="bi bi-calendar-event"></i></a>
+            </li>
+            <li>
+              <a href="#map-section" title="Peta Lokasi"><i class="bi bi-geo-alt"></i></a>
+            </li>
+            <li>
+              <a href="#gift" title="Wedding Gift"><i class="bi bi-gift"></i></a>
+            </li>
+            <li>
+              <a href="#rsvp" title="RSVP"><i class="bi bi-envelope"></i></a>
+            </li>
+            <li>
+              <a href="#thankyou" title="Terima Kasih"><i class="bi bi-heart"></i></a>
+            </li>
+          </ul>
+        </div>
+
+  <section id="hero" class="hero">
+        <h4>The Wedding Of</h4>
+        <h1>Suhdi & Rika</h1>
+        <p>18 Mei 2025</p>
+        <div id="countdown" class="circle-countdown">
+          <div class="countdown-item">
+            <div class="countdown-circle pink-bg">
+              <span id="days">00</span>
+            </div>
+            <p>Hari</p>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-circle pink-bg">
+              <span id="hours">00</span>
+            </div>
+            <p>Jam</p>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-circle pink-bg">
+              <span id="minutes">00</span>
+            </div>
+            <p>Menit</p>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-circle pink-bg">
+              <span id="seconds">00</span>
+            </div>
+            <p>Detik</p>
+          </div>
+        </div>
+        <button class="btn" id="viewInvitation">
+          Lihat Undangan
+        </button>
+    </section>
+  
+        <section id="couple" class="couple-section">
+          <div class="container">
+            <h2>Pasangan Pengantin</h2>
+            <div class="couple-container">
+              <!-- Mempelai Pria -->
+              <div class="couple-card">
+                <div class="couple-info">
+                  <h3>Muh Suhdi Safi'i Ahmad</h3>
+                  <p class="title">(Mempelai Pria)</p>
+                  <p class="parents">
+                    Putra Pertama dari:<br />Bapak Ahmad<br />&<br />Ibu Aminah
+                  </p>
+                </div>
+              </div>
+
+              <!-- Mempelai Wanita -->
+              <div class="couple-card">
+                <div class="couple-info">
+                  <h3>Rika Abdullah</h3>
+                  <p class="title">(Mempelai Wanita)</p>
+                  <p class="parents">
+                    Putri Ketiga dari:<br />Bapak Abdullah<br />&<br />Ibu
+                    Farida
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        <!-- Detail Acara -->
+        <section id="undangan" class="undangan-section">
+          <div class="container">
+            <h2>Detail Acara</h2>
+            <div class="event-container">
+              <div class="event-card">
+                <h3><i class="bi bi-hearts"></i> Akad Nikah</h3>
+                <p><i class="bi bi-calendar-heart"></i> Kamis, 15 Mei 2025</p>
+                <p><i class="bi bi-clock"></i> 09.00 - Selesai</p>
+                <p>
+                  <i class="bi bi-geo-alt"></i>Padang Redo, Desa Tanjong,
+                  Kec.Bua Ponrang, Kab. Luwu
+                </p>
+              </div>
+              <div class="event-card">
+                <h3><i class="bi bi-balloon-heart"></i> Resepsi</h3>
+                <p><i class="bi bi-calendar-heart"></i> Ahad, 19 Mei 2025</p>
+                <p><i class="bi bi-clock"></i> 09.00 - Selesai</p>
+                <p>
+                  <i class="bi bi-geo-alt"></i> Bukit Jaya, Kel. Bontoraya, Kec.
+                  Batang, Kab. Jeneponto
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+     
+
+        <!-- Peta Lokasi -->
+        <section id="map-section" class="map-section">
+          <div class="container">
+            <h2>Peta Lokasi</h2>
+            <p class="map-description">
+              Berikut adalah lokasi acara pernikahan kami:
+            </p>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d417.3881149078458!2d119.82904472670303!3d-5.583668592906863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1746591523768!5m2!1sid!2sid"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+
+        <!-- Wedding Gift -->
+        <section id="gift" class="gift-section">
+          <div class="container">
+            <h2>Wedding Gift</h2>
+            <div class="gift-container">
+              <div class="gift-card">
+                <i class="bi bi-gift-fill"></i>
+                <h3>Hadiah Pernikahan</h3>
+                <p>
+                  Doa dan restu Anda merupakan karunia terindah bagi kami. Namun
+                  jika Anda ingin memberikan hadiah, kami sangat menghargainya.
+                </p>
+
+                <div class="bank-account">
+                  <p><strong>Bank BRI</strong></p>
+                  <div class="account-row">
+                    <p id="bri-account">492601009687504</p>
+                    <button
+                      class="btn-copy"
+                      onclick="copyToClipboard('bri-account')"
+                    >
+                      <i class="bi bi-clipboard"></i>
+                    </button>
+                  </div>
+                  <p>Muh Suhdi Safi'i Ahmad</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RSVP -->
+        <section id="rsvp" class="rsvp-section">
+          <h2>Konfirmasi Kehadiran</h2>
+          <form class="rsvp-form">
+            <input type="text" placeholder="Nama Lengkap" required />
+            <select required>
+              <option value="">Hadir/Tidak?</option>
+              <option value="hadir">Ya, akan hadir</option>
+              <option value="tidak">Tidak bisa hadir</option>
+            </select>
+            <button id="sendButton" type="button">
+              Kirim <i class="bi bi-send"></i>
+            </button>
+          </form>
+        </section>
+
+        <!-- Terima Kasih -->
+        <section id="thankyou" class="thankyou-section">
+          <h2>Terima Kasih</h2>
+          <p class="quote">"Atas kehadiran dan doa restunya"</p>
+          <div class="couple-name">
+            <p>Suhdi & Rika</p>
+          </div>
+        </section>
+      
+        <footer class="footer">
+          <span>Hubungi Kami:</span>
+          <i class="bi bi-whatsapp"></i>
+          <a href="https://wa.me/6281234567890" target="_blank" title="Hubungi Kami di WhatsApp">
+            +62 81241569795
+          </a>
+        </footer>
+
+      <audio id="bgMusic" loop>
+        <source src="music/VELVET MOON.mp3" type="audio/mpeg" />
+        Browser Anda tidak mendukung elemen audio.
+      </audio>
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      </div>
+      </div>
+     </section>
+
+  </body>
+</html>
