@@ -822,7 +822,7 @@ section {
   right: 0;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.8);
-  padding: 5px 10px; /* Kurangi padding agar lebih ramping */
+  padding: 5px 5px; /* Kurangi padding agar lebih ramping */
   border-radius: 10px 0 0 10px;
   z-index: 1000;
 }
