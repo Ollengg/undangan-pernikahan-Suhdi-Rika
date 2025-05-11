@@ -817,6 +817,7 @@ section {
   z-index: 2; /* Pastikan shading berada di atas background */
 }
 .side-menu {
+  display : none;
   position: fixed;
   top: 50%;
   right: 0;
