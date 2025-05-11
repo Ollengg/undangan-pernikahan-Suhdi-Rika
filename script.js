@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const name = document.querySelector(".rsvp-form input").value;
       const attendance = document.querySelector(".rsvp-form select").value;
 
-      const phoneNumber = "6281241569795"; // Format: kode negara + nomor (tanpa "+")
+      const phoneNumber = "6282392044001"; // Format: kode negara + nomor (tanpa "+")
       const message = `Halo, saya ${name}. Saya ingin mengonfirmasi bahwa saya ${
         attendance === "hadir" ? "akan hadir" : "tidak bisa hadir"
       } di acara pernikahan.`;
