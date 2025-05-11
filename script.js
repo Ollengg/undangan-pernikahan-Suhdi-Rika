@@ -154,3 +154,29 @@ function copyToClipboard(elementId) {
     alert("Elemen teks untuk disalin tidak ditemukan.");
   }
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const sideMenu = document.querySelector(".side-menu");
+  const heroSection = document.getElementById("hero");
+
+  if (sideMenu && heroSection) {
+    // Fungsi untuk mengontrol visibilitas side-menu
+    const toggleSideMenu = () => {
+      const heroBottom = heroSection.getBoundingClientRect().bottom;
+
+      if (heroBottom <= 0) {
+        // Jika halaman sudah scroll melewati hero, tampilkan side-menu
+        sideMenu.style.display = "block";
+      } else {
+        // Jika masih di halaman hero, sembunyikan side-menu
+        sideMenu.style.display = "none";
+      }
+    };
+
+    // Jalankan fungsi saat halaman di-scroll
+    window.addEventListener("scroll", toggleSideMenu);
+
+    // Jalankan fungsi saat halaman dimuat
+    toggleSideMenu();
+  }
+});
+
